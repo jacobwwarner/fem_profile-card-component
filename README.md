@@ -29,8 +29,8 @@ This is a solution to the [Profile card component challenge on Frontend Mentor](
 
 ### Links
 
-- Solution URL: []()
-- Live Site URL: []()
+- Solution URL: [](https://www.frontendmentor.io/solutions/profile-card-mixing-flex-and-grid-UOmRVkdECu)
+- Live Site URL: [](https://jacobwwarner-profile-card.netlify.app/)
 
 ## My process
 
