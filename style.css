@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+:root {
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+
+    --clr-neutral-dark-gray: hsl(0, 0%, 59%);
+
+    --fs-400: 18px;
+
+    --ff-primary: "Kumbh Sans", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    background-color: var(--clr-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    line-height: 1.5;
+    position: relative;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+body::before {
+  background-image: url("./images/bg-pattern-top.svg");
+  top: -75vh;
+  left: -19vw;
+  width: 70vw;
+  height: 70vw;
+}
+
+body::after {
+  background-image: url("./images/bg-pattern-bottom.svg");
+  bottom: -85vh;
+  right: -15vw;
+  width: 70vw;
+  height: 70vw;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.profile-card {
+    background: hsl(0 0 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 1rem);
+    max-width: 350px;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.profile-card p {
+    padding: 0;
+    margin: 0;
+}
+
+.profile-card__banner {
+    background-image: url("./images/bg-pattern-card.svg");
+    background-size: cover;
+    background-position: center;
+    height: 130px;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.profile-card__image {
+    justify-content: center;
+}
+
+.profile-card__image img {
+    background: white;
+    width: 6rem;
+    padding: 0.3rem;
+    border-radius: 100%;
+    margin-top: -3rem;
+}
+
+.profile-card__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid hsla(0 0 59% / 0.3);
+    color: var(--clr-neutral-dark-gray);
+    /* font-size: var(--fs-400); */
+}
+
+.profile-card__details p:first-child {
+    color: black;
+    font-weight: 700;
+}
+
+.profile-card__location {
+    font-size: 0.925rem;
+}
+
+.profile-card__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem 2rem;
+}
+
+.stat-value {
+    font-weight: 700;
+}
+
+.stat-label {
+    color: var(--clr-neutral-dark-gray);
+    font-size: 0.625rem;
+    letter-spacing: 1.5px;
+}
+
+.flex {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.attribution {
+  background: hsla(0 0 100% / 0.4);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+  z-index: 2;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+}
+
+/* 
+
+.profile-card__banner {}
+
+.profile-card__name {}
+
+.profile-card__age {}
+
+.profile-card__location {}
+
+.stat-box {}
+
+
+*/
